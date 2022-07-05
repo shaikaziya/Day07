@@ -9,7 +9,7 @@ A)   class Movie{
       constructor(title,studio,rating="PG"){
             this.title=title;
             this.studio=studio;
-            this.rating=rating;         
+            this.rating=rating;  
          }
          getPG(movie){
             for(var i in movie){
@@ -22,12 +22,10 @@ A)   class Movie{
        }
    const arr=[];
    var movie=[{title:"123",studio:"south",rating:"P"},{title:"1234",studio:"north",rating:"PG"},{title:"12345",studio:"west",rating:"PG"}]
-   
    let movie1=new Movie(movie)
-   console.log("Movies rating PG  "+movie1.getPG(movie))
-   
+   console.log("Movies where rating=PG  "+movie1.getPG(movie))
    var movie2=new Movie("Casino Royale","Eon Productions","PG13")
-   console.log(`Title of movie is-----> ${movie2.title}, Studio of movie is-----> ${movie2.studio}, Rating of movie is------> ${movie2.rating}`)
+   console.log("Title of movie is----->"+movie2.title+"Studio of movie is----->"+ movie2.studio+"Rating of movie is------>"+ movie2.rating)
 
 Q 2) https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
 
@@ -37,46 +35,42 @@ A)  class Circle{
     this.color=color;
        }
     getRadius(){
-          return `Geting radius of the circle is-------> ${this.radius}`
+          return this.radius
      }
     setRadius(newRadius){
          this.radius=newRadius
-         return  `Geting New radius of the circle is-------> ${newRadius}`
+         
+         return newRadius
      }
      getColor(){
-         return  `Geting color-------> ${this.color}`
+         return  this.color
      }
      setColor(newcolor){
           this.color=newcolor
-          return  `Geting New color-------> ${newcolor}`
+          return newcolor
      }
-     toString(){
-          var value=`Getting toString-------> Circle[radius=${this.radius},color=${this.color}]`
-          return value
-       }
      getArea(){
          var pi=3.14
          var result=pi*Math.pow(this.radius,2)
-         return `Getting Circle Area------>${result}` 
+         return result 
        }
      getCircumference(){
          var pi=3.14
          var result=2*pi*this.radius
-         return `Getting Circle Circumference------>${result}` 
+         return result
        } 
     }
 let radius=1.0
 let color="red"
 let c1=new Circle(radius,color)
-console.log(c1.getRadius())
-console.log(c1.setRadius(3.0))
-console.log(c1.getColor())
-console.log(c1.setColor("black"))
-console.log(c1.toString())
+console.log("Geting radius of the circle is-------> "+c1.getRadius())
+console.log("Seting New radius of the circle is------->"+c1.setRadius(3.0))
+console.log("Geting color-------> "+c1.getColor())
+console.log("Seting New color-------> "+c1.setColor("black"))
 
 let c2=new Circle(radius,color)
-console.log(c2.getArea())
-console.log(c2.getCircumference())
+console.log("Getting Circle Area------>"+c2.getArea())
+console.log("Getting Circle Circumference------>"+c2.getCircumference())
 
 
 Q 3) Write a “person” class to hold all the details.
@@ -92,8 +86,8 @@ a)   class Person{
                   console.log("you get all the details   "+"name:-"+this.name+"       phoneno:- "+this.phoneno+"    address:-"+this.address+"    id:- "+this.id)
              }
             }
-var datails=new Person("Aziya","1234567890","Hyderabad","01")
-datails.getPerson()
+var details=new Person("Aziya","1234567890","Hyderabad","01")
+details.getPerson()
 
 
 Q 4) write a class to calculate uber price.
