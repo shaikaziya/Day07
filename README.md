@@ -9,7 +9,7 @@ A)   class Movie{
       constructor(title,studio,rating="PG"){
             this.title=title;
             this.studio=studio;
-            this.ratimg=rating;         
+            this.rating=rating;         
          }
          getPG(movie){
             for(var i in movie){
@@ -21,12 +21,13 @@ A)   class Movie{
           }
        }
    const arr=[];
-   var movie=[{title:"123",studio:"south",rating:"P",title:"1234",studio:"north",rating:"PG",title:"12345",studio:"west",rating:"PG"}]
+   var movie=[{title:"123",studio:"south",rating:"P"},{title:"1234",studio:"north",rating:"PG"},{title:"12345",studio:"west",rating:"PG"}]
+   
    let movie1=new Movie(movie)
    console.log("Movies rating PG  "+movie1.getPG(movie))
-   var movie2=new Movie(“Casino Royale”,“Eon Productions”,“PG­13”)
-   console.log(movie2)
-       
+   
+   var movie2=new Movie("Casino Royale","Eon Productions","PG13")
+   console.log(`Title of movie is-----> ${movie2.title}, Studio of movie is-----> ${movie2.studio}, Rating of movie is------> ${movie2.rating}`)
 
 Q 2) https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
 
